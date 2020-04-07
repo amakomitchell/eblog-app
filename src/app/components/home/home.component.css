@@ -1,0 +1,11 @@
+.home-header-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-size: 40px;
+    text-align: center;
+    /* letter-spacing: 0.1em; */
+    color: #8080ff;
+    margin-left: 25px;
+}
