@@ -1,11 +1,31 @@
-.home-header-text {
+
+ 
+.sub-header-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    width: 100vw;
+    padding: 15px 25px 25px 25px;
+    background-color: #907cff;
+}
+
+.sub-header-text {
     font-family: Inherit;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
     font-size: 40px;
-    text-align: center;
-    /* letter-spacing: 0.1em; */
-    color: #8080ff;
-    margin-left: 25px;
+    color: #ffffff;  
+}
+
+.desc-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: normal;
+    letter-spacing: 0.1em;
+    margin-top: 25px;
 }
