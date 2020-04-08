@@ -10,15 +10,14 @@
     margin-left: 25px;
 }
 
-a {
-    color: #a8a5a5;
-    cursor: pointer;
-}
-
 a:link, a:visited {
-    color: black;
-    padding: 14px 25px;
+    cursor: pointer;
+    color: #a8a5a5;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+a:hover, a:active {
+    color: #000000;
 }

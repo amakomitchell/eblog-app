@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="register-container 100-vw">
+    <div class="header">
+        <div class="register-header-text">Sign up</div>
+        <div class="sub-text">Have an account?</div>
+    </div>
+    <div class="form-content">
+        <form [formGroup]= "loginForm" (ngSubmit)="onSubmit()">
+            <input class="form-control form-control-lg" type="text" placeholder="Email">
+            <input class="form-control form-control-lg" type="text" placeholder="Password">
+            <button type="button" class="btn btn-secondary btn-lg">Sign up</button>
+        </form>
+    </div>
+</div>

@@ -1,7 +1,35 @@
 .header {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
-    
+    height: 25vh;
+    width: 100vw;
+    padding: 15px 25px 25px 25px;
+}
+
+.register-header-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-size: 45px;
+    color: #000000;  
+}
+
+.sub-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-size: 24px;
+    color: #907cff;
+    line-height: normal;
+    letter-spacing: 0.1em;
+}
+
+.form-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
 }

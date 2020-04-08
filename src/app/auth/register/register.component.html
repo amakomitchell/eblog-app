@@ -1,6 +1,14 @@
-<div class="regsiter-container d-flex p-2 bd-highlight">
+<div class="register-container 100-vw">
     <div class="header">
         <div class="register-header-text">Sign up</div>
         <div class="sub-text">Have an account?</div>
+    </div>
+    <div class="form-content">
+        <form [formGroup]= "registerForm" (ngSubmit)="onSubmit()">
+            <input formControlName="userName" class="form-control form-control-lg" type="text" placeholder="UserName">
+            <input formControlName="email" class="form-control form-control-lg" type="text" placeholder="Email">
+            <input formControlName="password" class="form-control form-control-lg" type="password" placeholder="Password">
+            <button type="button" class="btn btn-secondary btn-lg">Sign up</button>
+        </form>
     </div>
 </div>
