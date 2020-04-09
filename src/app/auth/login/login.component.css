@@ -1,0 +1,53 @@
+.login-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 25vh;
+    width: 100vw;
+    /* padding: 15px 25px 25px 25px; */
+}
+
+.login-header-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-size: 45px;
+    color: #000000;  
+}
+
+.login-sub-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-size: 24px;
+    color: #907cff;
+    line-height: normal;
+    letter-spacing: 0.1em;
+}
+
+.form-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 10px 10px; */
+}
+
+input[type=text],[type=password] {
+    width: 660px;
+    height: 60px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.btn-lg {
+    float: right;
+    background-color: #907cff;
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 15px 32px;
+    margin: 4px 2px;
+}

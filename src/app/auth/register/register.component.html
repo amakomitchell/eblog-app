@@ -4,7 +4,7 @@
         <div class="sub-text">Have an account?</div>
     </div>
     <div class="form-content">
-        <form [formGroup]= "registerForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <input formControlName="userName" class="form-control" type="text" placeholder="Username">
             </div>
@@ -15,7 +15,7 @@
                 <input formControlName="password" class="form-control" type="password" placeholder="Password">
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-secondary btn-lg">Sign up</button>
+                <button [disabled]="loading" class="btn btn-lg">Sign up</button>
             </div>
         </form>
     </div>
