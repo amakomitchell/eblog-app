@@ -7,8 +7,8 @@ import { UserService, AuthenticationService, AlertService } from '../../core/ser
 
 @Component({
     selector: 'app-register', 
-    templateUrl: './register.component.html',
-    styleUrls: ['./register.component.css'] 
+    templateUrl: 'register.component.html',
+    styleUrls: ['register.component.css'] 
 })
 export class RegisterComponent implements OnInit {
     registerForm: FormGroup;
@@ -34,6 +34,8 @@ export class RegisterComponent implements OnInit {
             email: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]]
         });
+        console.log('The result: ', this.registerForm);
+
     }
 
     // convenience getter for easy access to form fields
@@ -55,7 +57,6 @@ export class RegisterComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    console.log('The result: ', data);
                     this.alertService.success('Registration successful', true);
                     this.router.navigate(['/login'], { queryParams: { registered: true }});
                 },
