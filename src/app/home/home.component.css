@@ -28,3 +28,11 @@
     letter-spacing: 0.1em;
     margin-top: 25px;
 }
+
+.article-container {
+    display:  flex;
+    margin-top: 15px;
+    width: 100vw;
+    height: 80vh;
+    /* background-color: red; */
+}
