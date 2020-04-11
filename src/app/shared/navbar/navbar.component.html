@@ -2,13 +2,16 @@
     <div class="d-flex bd-highlight mb-3">
         <div class="home-header-text mr-auto p-2 bd-highlight">eBlog</div>
         <div class="p-2 bd-highlight">
-            <a routerLink="#" routerLinkActive="active">Home</a>
+            <a routerLink="/" routerLinkActive="active">Home</a>
         </div>
         <div class="p-2 bd-highlight">
-        <a routerLink="login">Sign in</a> 
+            <a routerLink="login">Sign in</a> 
         </div>
         <div class="p-2 bd-highlight">
-        <a routerLink="register">Sign up</a> 
+            <a routerLink="register">Sign up</a> 
+        </div>
+        <div class="p-2 bd-highlight" *ngIf="currentUser">
+            <a (click)="logout()">Logout</a> 
         </div>
     </div>
 </div>

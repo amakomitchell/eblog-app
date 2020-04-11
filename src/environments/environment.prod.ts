@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
-  apiUrl: 'http://localhost:4000'
+  production: false,
+  apiUrl: 'https://eblog-api.encentrals.com/api'
 };
