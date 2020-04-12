@@ -1,0 +1,43 @@
+.article-body {
+    width: 700px;
+    height: 300px;
+}
+
+.global-header {
+
+}
+
+.global-content {
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.avatar-image  {
+    width: 30px;
+    height: 30px;
+    background: #907cff;
+    opacity: 0.5;
+    border-radius: 100%;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.global-content {
+    margin-top: 0px;
+}
+
+.content-header {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-body {
+    color: #a8a5a5;
+}

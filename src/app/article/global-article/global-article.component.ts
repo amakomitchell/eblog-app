@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { first } from 'rxjs/operators';
 import { ArticleService } from 'src/app/core/services/article.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-global-article',
