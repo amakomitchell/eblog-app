@@ -1,19 +1,31 @@
-hr {
-    margin-top: auto;
+.article-body {
+    margin-left: 18px;
+    height: 50px;
+    width: 70vw;
 }
 
-.article-body {
-    
+
+hr.new3 {
+    margin-left: auto;
+    border: 1px solid #ded7d7;
+    width: 700px;
 }
+
 
 .article-content {
-    width: 75vw;
+    width: 70vw;
     height: 100vh;
-    /* background-color: aqua; */
+    margin-left: 18px;
 }
 
 .article-tags {
     width: 24vw;
-    height: 100vh;
-    /* background-color: blanchedalmond; */
+    height: 200px;
+    background-color: #f4f3fe;
+}
+
+.button-tags {
+    color: black;
+    border: 1px solid #907cff;
+    border-radius: 7px;
 }

@@ -1,25 +1,22 @@
-<div class="article-cont vw-100">
-    <div class="article-header">
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="feed-article">Your Feed</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" routerLink="global-article">Global Feed</a>
-            </li>
-        </ul>
-        <hr />
-    </div>
-    <div class="article-body d-flex flex-row bd-highlight">
+<div class="article-cont d-flex flex-row bd-highlight vw-100">
+    <div class="d-inline-flex flex-column p-2 bd-highlight">
+        <div class="article-body p-2 bd-highlight">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="feed-article">Your Feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="global-article">Global Feed</a>
+                </li>
+            </ul>  
+        </div>
+        <div class="p-2 bd-highlight"><hr class="new3" /></div>
         <div class="article-content p-2 bd-highlight">
             <app-global-article></app-global-article>
         </div>
-        <div class="article-tags p-2 bd-highlight">
-            <ul>
-                <li *ngFor="let tag of tags">
-                    {{tag}}
-                </li>
-            </ul>
-        </div>
+    </div>
+    <div class="article-tags ml-auto p-2 bd-highlight">
+        <h3>Popular Tags</h3>
+        <button *ngFor="let tag of tags" class="button-tags">{{tag}}</button>
     </div>
 </div>
