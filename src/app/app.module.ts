@@ -12,6 +12,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AlertComponent } from './shared/alert/alert.component';
 import { ArticleComponent } from './article/article.component';
+import { GlobalArticleComponent } from './article/global-article/global-article.component';
+import { FeedArticlesComponent } from './article/feed-articles/feed-articles.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ArticleComponent } from './article/article.component';
     RegisterComponent,
     LoginComponent,
     AlertComponent,
-    ArticleComponent
+    ArticleComponent,
+    GlobalArticleComponent,
+    FeedArticlesComponent
   ],
   imports: [
     BrowserModule,

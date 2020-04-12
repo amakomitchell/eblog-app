@@ -1,3 +1,19 @@
 hr {
     margin-top: auto;
 }
+
+.article-body {
+    
+}
+
+.article-content {
+    width: 75vw;
+    height: 100vh;
+    /* background-color: aqua; */
+}
+
+.article-tags {
+    width: 24vw;
+    height: 100vh;
+    /* background-color: blanchedalmond; */
+}

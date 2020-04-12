@@ -1,0 +1,11 @@
+<div class="global-article-container">
+    <div class="article-body d-flex flex-row bd-highlight mb-3">
+        <div class="p-2 bd-highlight"></div>
+        <div class="p-2 bd-highlight"></div>
+    </div>
+    <ul>
+        <li *ngFor="let article of articles">
+            {{ article.createdAt | date }}
+        </li>
+    </ul>
+</div>
