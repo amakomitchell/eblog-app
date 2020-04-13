@@ -12,8 +12,8 @@
 
 .sub-header-text {
     font-family: Inherit;
-    font-style: normal;
-    font-weight: 800;
+    /* font-style: normal; */
+    font-weight: bold;
     line-height: normal;
     font-size: 40px;
     color: #ffffff;  
@@ -21,7 +21,7 @@
 
 .desc-text {
     font-family: Inherit;
-    font-style: normal;
+    font-weight: bold;
     font-size: 24px;
     color: #ffffff;
     line-height: normal;
