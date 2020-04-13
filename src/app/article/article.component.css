@@ -1,14 +1,14 @@
 .article-body {
     margin-left: 18px;
     height: 50px;
-    width: 70vw;
+    width: 76vw;
 }
 
 
 hr.new3 {
-    margin-left: auto;
+    margin-left: 0;
     border: 1px solid #ded7d7;
-    width: 700px;
+    width: 74vw;
 }
 
 
@@ -16,6 +16,7 @@ hr.new3 {
     width: 70vw;
     height: 100vh;
     margin-left: 18px;
+    margin-top: 15px;
 }
 
 .article-tags {
@@ -28,4 +29,15 @@ hr.new3 {
     color: black;
     border: 1px solid #907cff;
     border-radius: 7px;
+}
+
+a:link, a:visited {
+    color: #a8a5a5;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+    color: #907cff;
 }

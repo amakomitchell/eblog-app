@@ -1,5 +1,5 @@
 <div class="global-article-container">
-    <div class="article-body d-flex flex-column bd-highlight mb-3" *ngFor="let article of articles">
+    <div class="article-body d-flex flex-column bd-highlight" *ngFor="let article of articles">
         <div class="global-header d-flex flex-row bd-highlight mb-3">
             <div class="avatar-image  p-2 bd-highlight">
                 <img src={{article.author.image}} />
@@ -35,7 +35,7 @@
         </div>
         <hr class="new4">
     </div>
-    <div>
+    <div class="paginator">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="#">1</a></li>

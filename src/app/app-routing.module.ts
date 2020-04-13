@@ -6,6 +6,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './core/interceptors';
 import { FeedArticlesComponent } from './article/feed-articles/feed-articles.component';
 import { GlobalArticleComponent } from './article/global-article/global-article.component';
+import { ArticleComponent } from './article/article.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'feed-articles', component: FeedArticlesComponent, canActivate: [AuthGuard] },
-  { path: 'global-articles', component: GlobalArticleComponent },
+  { path: '', component: ArticleComponent, children: [
+    {
+      path: '',
+      component: GlobalArticleComponent,
+    },
+  ]},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

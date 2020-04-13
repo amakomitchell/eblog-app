@@ -1,5 +1,5 @@
 .article-body {
-    width: 700px;
+    width: 74vw;
     height: 250px;
     margin-top: 0px;
     /* background-color: brown; */
@@ -55,7 +55,7 @@ ul {
 
 hr.new4 {
     border: 1px solid #ded7d7;
-    width: 700px;
+    width: 74vw;
 }
 
 .fas {
