@@ -12,12 +12,35 @@
                         {{ article?.createdAt | date }}
                     </div>
                 </div>
-                <div class="p-2 bd-highlight">
+                <div class="p-4 bd-highlight">
                     <button class="button-count"><i class="fas fa-heart"></i>Favourite Articles {{article?.favoritesCount || 0}}</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="article-container" [innerHTML]="article?.body">
+    </div>
+    <div class="tags-container d-flex flex-row bd-highlight">
+        <div class="p-2 bd-highlight">
+            <button class="button-tags">virus</button>
+        </div>
+        <div class="p-2 bd-highlight">
+            <button class="button-tags">COVID-19</button>
+        </div>
+    </div>
+    <hr class="new4">
+    <div class="global-header d-flex flex-row justify-content-center bd-highlight mb-3">
+        <div class="avatar-image  p-2 bd-highlight">
+            <img [src]="article?.author?.image || 'https://www.gravatar.com/HASH'" />
+        </div>
+        <div class="d-inline-flex align-items-start flex-column p-2 bd-highlight">
+            <div class="p-2 bd-highlight" style="font-size: 18px; color:#907cff;">{{ article?.author?.username }}</div>
+            <div class="p-2 bd-highlight" style="font-size: 14px; color:#d1d1d1;">
+                {{ article?.createdAt | date }}
+            </div>
+        </div>
+        <div class="p-5 bd-highlight">
+            <button class="button-count-bottom"><i class="heart-count fas fa-heart"></i>Favourite Articles {{article?.favoritesCount || 0}}</button>
+        </div>
     </div>
 </div>

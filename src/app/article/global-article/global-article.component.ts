@@ -15,9 +15,6 @@ export class GlobalArticleComponent implements OnInit {
     limit: 5
   };
 
-  // pager = {};
-  // pageOfItems = [];
-
   constructor(
     private articleService: ArticleService,
     private route: ActivatedRoute
@@ -33,13 +30,5 @@ export class GlobalArticleComponent implements OnInit {
     this.articleService.getArticles(offset, limit)
     .subscribe(articles => this.articles = articles.articles);
   }
-
-//   private loadPage(page) {
-//     // get page of items from api
-//     this.http.get<any>(`/api/items?page=${page}`).subscribe(x => {
-//         this.pager = x.pager;
-//         this.pageOfItems = x.pageOfItems;
-//     });
-// }
 
 }

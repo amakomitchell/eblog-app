@@ -27,7 +27,7 @@
     display:  flex;
     margin-top: 15px;
     width: 100vw;
-    height: 80vh;
+    height: 50vh;
 }
 
 .avatar-image  {
@@ -45,4 +45,31 @@
     border: 1px solid white;
     border-radius: 7px;
     font-size: 16px; /* Set a font size */
+}
+
+.button-tags {
+    background-color: white;
+    color: black;
+    border: 1px solid #907cff;
+    border-radius: 15px;
+}
+
+.tags-container {
+    margin-top: 50px;
+}
+
+.button-count-bottom {
+    background-color: white;
+    color: #907cff;
+    border: 1px solid #907cff;
+    border-radius: 7px;
+    font-size: 16px; /* Set a font size */
+}
+
+.heart-count {
+    color: #907cff;
+}
+
+hr.new4 {
+    border-color:#ded7d7;
 }

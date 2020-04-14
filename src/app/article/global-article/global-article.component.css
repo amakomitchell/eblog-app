@@ -70,4 +70,5 @@ hr.new4 {
 
 .pagination {
     margin-bottom: 50px;
+    cursor: pointer;
 }
