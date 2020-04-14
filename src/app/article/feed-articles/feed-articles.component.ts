@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { ArticleService } from 'src/app/core/services/article.service';
 
 @Component({
   selector: 'app-feed-articles',
@@ -7,9 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedArticlesComponent implements OnInit {
 
-  constructor() { }
+  articles = [];
+    paging = {
+      offset: 0,
+      limit: 5
+    };
 
-  ngOnInit() {
-  }
+    // pager = {};
+    // pageOfItems = [];
+
+    constructor(
+      private articleService: ArticleService,
+      private route: ActivatedRoute
+    ) { }
+
+    ngOnInit() {
+      this.loadFeed();
+
+    }
+
+    private loadFeed() {
+      const { offset, limit } = this.paging;
+
+      this.articleService.getFeed(offset, limit)
+      .subscribe(articles => this.articles = articles.articles);
+    }
+
+  //   private loadPage(page) {
+  //     // get page of items from api
+  //     this.http.get<any>(`/api/items?page=${page}`).subscribe(x => {
+  //         this.pager = x.pager;
+  //         this.pageOfItems = x.pageOfItems;
+  //     });
+  // }
 
 }

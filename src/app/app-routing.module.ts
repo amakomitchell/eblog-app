@@ -7,6 +7,7 @@ import { AuthGuard } from './core/interceptors';
 import { FeedArticlesComponent } from './article/feed-articles/feed-articles.component';
 import { GlobalArticleComponent } from './article/global-article/global-article.component';
 import { ArticleComponent } from './article/article.component';
+import { ArticleExtensionComponent } from './article/article-extension/article-extension.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
       component: GlobalArticleComponent,
     },
   ]},
+  { path: 'read-more/:slug', component: ArticleExtensionComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

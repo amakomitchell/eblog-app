@@ -14,6 +14,7 @@ import { AlertComponent } from './shared/alert/alert.component';
 import { ArticleComponent } from './article/article.component';
 import { GlobalArticleComponent } from './article/global-article/global-article.component';
 import { FeedArticlesComponent } from './article/feed-articles/feed-articles.component';
+import { ArticleExtensionComponent } from './article/article-extension/article-extension.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FeedArticlesComponent } from './article/feed-articles/feed-articles.com
     AlertComponent,
     ArticleComponent,
     GlobalArticleComponent,
-    FeedArticlesComponent
+    FeedArticlesComponent,
+    ArticleExtensionComponent
   ],
   imports: [
     BrowserModule,

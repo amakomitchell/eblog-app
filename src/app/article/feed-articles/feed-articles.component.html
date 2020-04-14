@@ -1,1 +1,58 @@
-<p>feed-articles works!</p>
+<div class="global-article-container">
+    <div class="article-body d-flex flex-column bd-highlight" *ngFor="let article of articles">
+        <div class="global-header d-flex flex-row bd-highlight mb-3">
+            <div class="avatar-image  p-2 bd-highlight">
+                <img src={{article.author.image}} />
+            </div>
+            <div class="d-inline-flex flex-column bd-highlight" style="margin-left: 3px;">
+                <ul>
+                    <li class="d-flex align-items-start" style="margin-top: auto; color: #907cff; font-size: 13px;">{{ article.author.username }}</li>
+                    <li class="d-flex align-items-end" style="font-size:8px;">{{ article.createdAt | date }}</li>
+                </ul>
+            </div>
+            <div class="ml-auto p-2 bd-highlight">
+                <button class="button-count"><i class="fas fa-heart"></i>{{article.favoritesCount}}</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column bd-highlight global-content">
+            <div class="content-header p-2 bd-highlight">
+                {{ article.title }}
+            </div>
+            <div class="content-body p-2 bd-highlight">
+                {{ article.description }}
+            </div>
+        </div>
+        <div class="d-inline-flex bd-highlight mb-3">
+            <div class="mr-auto p-2 bd-highlight">
+                <a class="read-more-link" routerLink="/read-more">Read more...</a>
+            </div>
+            <div class="p-2 bd-highlight">
+                <button class="button-tags">virus</button>
+            </div>
+            <div class="p-2 bd-highlight">
+                <button class="button-tags">COVID-19</button>
+            </div>
+        </div>
+        <hr class="new4">
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul *ngIf="paging.pages && paging.pages.length" class="pagination">
+            <li [ngClass]="{disabled:paging.currentPage === 1}" class="page-item first-item">
+                <a routerLink [queryParams]="{ offset: 0 }" class="page-link">First</a>
+            </li>
+            <li [ngClass]="{disabled:paging.currentPage === 1}" class="page-item previous-item">
+                <a routerLink [queryParams]="{ offset: paging.currentPage - 1 }" class="page-link">Previous</a>
+            </li>
+            <li *ngFor="let offset of paging.pages" [ngClass]="{active:paging.currentPage === page}" class="page-item number-item">
+                <a routerLink [queryParams]="{ offset: offset }" class="page-link">{{page}}</a>
+            </li>
+            <li [ngClass]="{disabled:paging.currentPage === paging.totalPages}" class="page-item next-item">
+                <a routerLink [queryParams]="{ offset: paging.currentPage + 1 }" class="page-link">Next</a>
+            </li>
+            <li [ngClass]="{disabled:paging.currentPage === pager.totalPages}" class="page-item last-item">
+                <a routerLink [queryParams]="{ offset: paging.totalPages }" class="page-link">Last</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+

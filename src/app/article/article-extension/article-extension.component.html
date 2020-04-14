@@ -1,0 +1,23 @@
+<div class="home-container vw-100">
+    <div class="sub-header-container">
+        <div class="sub-header-text">{{ article?.title }}</div>
+        <div class="desc-text">
+            <div class="global-header d-flex flex-row bd-highlight mb-3">
+                <div class="avatar-image  p-2 bd-highlight">
+                    <img [src]="article?.author?.image || 'https://www.gravatar.com/HASH'" />
+                </div>
+                <div class="d-inline-flex flex-column p-2 bd-highlight" style="font-size: 18px;">
+                    <div class="p-2 bd-highlight">{{ article?.author?.username }}</div>
+                    <div class="p-2 bd-highlight">
+                        {{ article?.createdAt | date }}
+                    </div>
+                </div>
+                <div class="p-2 bd-highlight">
+                    <button class="button-count"><i class="fas fa-heart"></i>Favourite Articles {{article?.favoritesCount || 0}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-container" [innerHTML]="article?.body">
+    </div>
+</div>

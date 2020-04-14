@@ -24,7 +24,7 @@
         </div>
         <div class="d-inline-flex bd-highlight mb-3">
             <div class="mr-auto p-2 bd-highlight">
-                <a class="read-more-link" href="">Read more...</a>
+                <a class="read-more-link" [routerLink]="['read-more', article.slug]">Read more...</a>
             </div>
             <div class="p-2 bd-highlight">
                 <button class="button-tags">virus</button>
@@ -36,7 +36,7 @@
         <hr class="new4">
     </div>
     <nav aria-label="Page navigation example">
-        <ul *ngIf="paging.pages && paging.pages.length" class="pagination">
+        <ul *ngIf="articles && articles.length" class="pagination">
             <li [ngClass]="{disabled:paging.currentPage === 1}" class="page-item first-item">
                 <a routerLink [queryParams]="{ offset: 0 }" class="page-link">First</a>
             </li>

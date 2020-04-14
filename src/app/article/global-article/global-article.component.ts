@@ -25,7 +25,6 @@ export class GlobalArticleComponent implements OnInit {
 
   ngOnInit() {
     this.loadGlobalArticles();
-
   }
 
   private loadGlobalArticles() {

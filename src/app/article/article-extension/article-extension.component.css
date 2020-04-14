@@ -1,0 +1,48 @@
+.sub-header-container {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 100vw;
+    padding: 15px 25px 25px 25px;
+    background-color: #907cff;
+}
+
+.sub-header-text {
+    font-family: Inherit;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 40px;
+    color: #ffffff;  
+}
+
+.desc-text {
+    font-family: Inherit;
+    color: #ffffff;
+    line-height: normal;
+    letter-spacing: 0.1em;
+    margin-top: 25px;
+}
+
+.article-container {
+    display:  flex;
+    margin-top: 15px;
+    width: 100vw;
+    height: 80vh;
+}
+
+.avatar-image  {
+    width: 50px;
+    height: 50px;
+    background: #f4f3fe;
+    opacity: 0.5;
+    border-radius: 100%;
+    margin-bottom: 32px;
+}
+
+.button-count {
+    background-color: #907cff;
+    color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+    font-size: 16px; /* Set a font size */
+}
