@@ -16,9 +16,6 @@ export class FeedArticlesComponent implements OnInit {
       limit: 5
     };
 
-    // pager = {};
-    // pageOfItems = [];
-
     constructor(
       private articleService: ArticleService,
       private route: ActivatedRoute
@@ -33,7 +30,7 @@ export class FeedArticlesComponent implements OnInit {
       const { offset, limit } = this.paging;
 
       this.articleService.getFeed(offset, limit)
-      .subscribe(articles => this.articles = articles.articles);
+      .subscribe(response => this.articles = response.articles);
     }
 
 }

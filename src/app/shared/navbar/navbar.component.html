@@ -5,10 +5,19 @@
             <a routerLink="/" routerLinkActive="active">Home</a>
         </div>
         <div class="p-2 bd-highlight">
-            <a routerLink="login">Sign in</a> 
+            <a routerLink="login" *ngIf="!currentUser">Sign in</a> 
         </div>
         <div class="p-2 bd-highlight">
-            <a routerLink="register">Sign up</a> 
+            <a routerLink="register" *ngIf="!currentUser">Sign up</a> 
+        </div>
+        <div class="p-2 bd-highlight" *ngIf="currentUser">
+            <a routerLink="create-article"><i class="far fa-file"></i> New Articles</a> 
+        </div>
+        <div class="p-2 bd-highlight" *ngIf="currentUser">
+            <a routerLink="settings"><i class="fas fa-cog"></i> Settings</a> 
+        </div>
+        <div class="p-2 bd-highlight" *ngIf="currentUser">
+            <a routerLink="admin">Admin</a> 
         </div>
         <div class="p-2 bd-highlight" *ngIf="currentUser">
             <a (click)="logout()">Logout</a> 

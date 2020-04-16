@@ -14,7 +14,7 @@ export class ArticleService {
     }
 
     getFeed(offset: number, limit: number) {
-        return this.http.get<any>(`${environment.apiUrl}/articles/feed`);
+        return this.http.get<any>(`${environment.apiUrl}/articles/feed/?offset=${offset}&limit=${limit}`);
     }
 
     getArticleBySlug(slug: string) {
