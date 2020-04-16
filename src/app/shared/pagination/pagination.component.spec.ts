@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 
 import { PaginationComponent } from './pagination.component';
 import { EventEmitter } from '@angular/core';
@@ -86,23 +86,77 @@ fdescribe('PaginationComponent', () => {
     component.navigate(false, component.nextPage);
   });
 
-  it('should call #navigate with correct params when "First" button clicked', () => {
-    const navigateSpy = spyOn(component, 'navigate');
+  describe('DOM Tests', () => {
+    it('should call #navigate with correct params when "First" button clicked', () => {
+      const navigateSpy = spyOn(component, 'navigate');
 
-    const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
+      const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
 
-    anchorList[0].nativeElement.dispatchEvent(new CustomEvent('click'));
+      anchorList[0].nativeElement.dispatchEvent(new CustomEvent('click'));
 
-    expect(navigateSpy).toHaveBeenCalledWith(true, 1);
+      expect(navigateSpy).toHaveBeenCalledWith(true, 1);
+    });
+
+    it('should call #navigate with correct params when "Last" button clicked', () => {
+      const navigateSpy = spyOn(component, 'navigate');
+
+      const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
+
+      anchorList[4].nativeElement.dispatchEvent(new CustomEvent('click'));
+
+      expect(navigateSpy).toHaveBeenCalledWith(false, 7);
+    });
+
+    it('should call #navigate with correct params when "Previous" button clicked', () => {
+      const navigateSpy = spyOn(component, 'navigate');
+
+      const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
+
+      anchorList[1].nativeElement.dispatchEvent(new CustomEvent('click'));
+
+      expect(navigateSpy).toHaveBeenCalledWith(true, 1);
+    });
+
+    it('should call #navigate with correct params when "Next" button clicked', () => {
+      const navigateSpy = spyOn(component, 'navigate');
+
+      const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
+
+      anchorList[3].nativeElement.dispatchEvent(new CustomEvent('click'));
+
+      expect(navigateSpy).toHaveBeenCalledWith(false, 2);
+    });
+
+    it('should render correct page number when navigation buttons clicked', () => {
+      const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
+
+      const pageNumberElement: HTMLElement = anchorList[2].nativeElement;
+
+      expect(pageNumberElement.textContent).toEqual("1");
+
+      // click "first"
+      anchorList[0].nativeElement.dispatchEvent(new CustomEvent('click'));
+
+      expect(pageNumberElement.textContent).toEqual("1");
+
+      // click "last"
+      anchorList[4].nativeElement.dispatchEvent(new CustomEvent('click'));
+      fixture.detectChanges();
+
+      expect(pageNumberElement.textContent).toEqual("7");
+
+      // click "previous"
+      anchorList[1].nativeElement.dispatchEvent(new CustomEvent('click'));
+      fixture.detectChanges();
+
+      expect(pageNumberElement.textContent).toEqual("6");
+
+      // click "next"
+      anchorList[3].nativeElement.dispatchEvent(new CustomEvent('click'));
+      fixture.detectChanges();
+
+      expect(pageNumberElement.textContent).toEqual("7");
+    });
   });
 
-  it('should call #navigate with correct params when "Last" button clicked', () => {
-    const navigateSpy = spyOn(component, 'navigate');
-
-    const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
-
-    anchorList[anchorList.length - 1].nativeElement.dispatchEvent(new CustomEvent('click'));
-
-    expect(navigateSpy).toHaveBeenCalledWith(true, 1);
-  });
 });

@@ -31,13 +31,13 @@
       }
 
       ngOnInit() {
-          this.loginForm = this.formBuilder.group({
-              email: ['', Validators.required],
-              password: ['', Validators.required]
-          });
+        this.loginForm = this.formBuilder.group({
+            email: ['', Validators.required],
+            password: ['', Validators.required]
+        });
 
-          // get return url from route parameters or default to '/'
-          this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+        // get return url from route parameters or default to '/'
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
       }
 
       // convenience getter for easy access to form fields
