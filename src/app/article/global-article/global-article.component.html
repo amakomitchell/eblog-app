@@ -35,23 +35,8 @@
         </div>
         <hr class="new4">
     </div>
-    <nav aria-label="Page navigation example">
-        <ul *ngIf="articles && articles.length" class="pagination">
-            <li [ngClass]="{disabled:paging.currentPage === 1}" class="page-item first-item">
-                <a routerLink [queryParams]="{ offset: 0 }" class="page-link">First</a>
-            </li>
-            <li [ngClass]="{disabled:paging.currentPage === 1}" class="page-item previous-item">
-                <a routerLink [queryParams]="{ offset: paging.currentPage - 1 }" class="page-link">Previous</a>
-            </li>
-            <li *ngFor="let offset of paging.pages" [ngClass]="{active:paging.currentPage === page}" class="page-item number-item">
-                <a routerLink [queryParams]="{ offset: offset }" class="page-link">{{page}}</a>
-            </li>
-            <li [ngClass]="{disabled:paging.currentPage === paging.totalPages}" class="page-item next-item">
-                <a routerLink [queryParams]="{ offset: paging.currentPage + 1 }" class="page-link">Next</a>
-            </li>
-            <li [ngClass]="{disabled:paging.currentPage === pager.totalPages}" class="page-item last-item">
-                <a routerLink [queryParams]="{ offset: paging.totalPages }" class="page-link">Last</a>
-            </li>
-        </ul>
-    </nav>
+    <app-pagination [page]="1"
+                    [itemsPerPage]="paging.limit" 
+                    [totalItems]="articles?.length"
+                    (pageChanged)="loadNewPage($event)"></app-pagination>
 </div>

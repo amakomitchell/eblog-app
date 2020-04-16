@@ -10,6 +10,7 @@ import { ArticleService } from 'src/app/core/services/article.service';
 })
 export class GlobalArticleComponent implements OnInit {
   articles = [];
+  articleCount = 0;
   paging = {
     offset: 0,
     limit: 5
@@ -28,7 +29,14 @@ export class GlobalArticleComponent implements OnInit {
     const { offset, limit } = this.paging;
 
     this.articleService.getArticles(offset, limit)
-    .subscribe(articles => this.articles = articles.articles);
+      .subscribe(response => {
+        this.articleCount = response.articleCount;
+        this.articles = response.articles;
+      });
+  }
+
+  loadNewPage(page: number) {
+    console.log(`Page: ${page}`);
   }
 
 }

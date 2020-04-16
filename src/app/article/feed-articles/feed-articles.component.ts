@@ -36,12 +36,4 @@ export class FeedArticlesComponent implements OnInit {
       .subscribe(articles => this.articles = articles.articles);
     }
 
-  //   private loadPage(page) {
-  //     // get page of items from api
-  //     this.http.get<any>(`/api/items?page=${page}`).subscribe(x => {
-  //         this.pager = x.pager;
-  //         this.pageOfItems = x.pageOfItems;
-  //     });
-  // }
-
 }

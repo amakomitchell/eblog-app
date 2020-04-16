@@ -15,6 +15,7 @@ import { ArticleComponent } from './article/article.component';
 import { GlobalArticleComponent } from './article/global-article/global-article.component';
 import { FeedArticlesComponent } from './article/feed-articles/feed-articles.component';
 import { ArticleExtensionComponent } from './article/article-extension/article-extension.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ArticleExtensionComponent } from './article/article-extension/article-e
     ArticleComponent,
     GlobalArticleComponent,
     FeedArticlesComponent,
-    ArticleExtensionComponent
+    ArticleExtensionComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

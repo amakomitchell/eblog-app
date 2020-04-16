@@ -1,0 +1,22 @@
+.pagination {
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.pagination .page-item {
+    cursor: pointer;
+}
+
+.pagination .page-number {
+    color: #999;
+}
+
+.pagination .page-number .page-link:hover {
+    background-color: transparent !important;
+}
+
+.pagination .page-item .page-link.disabled {
+    color: #ccc;
+    background: #fafafa;
+    cursor: not-allowed;
+}
