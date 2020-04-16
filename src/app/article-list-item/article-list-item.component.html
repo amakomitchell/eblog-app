@@ -1,0 +1,33 @@
+<div class="article-body d-flex flex-column bd-highlight">
+    <div class="global-header d-flex flex-row bd-highlight mb-3">
+        <div class="avatar-image  p-2 bd-highlight">
+            <!--<img src={{article.author.image}} />-->
+        </div>
+        <div class="d-inline-flex flex-column bd-highlight" style="margin-left: 3px;">
+            <ul>
+                <li class="d-flex align-items-start" style="margin-top: auto; color: #907cff; font-size: 13px;">{{ article.author.username }}</li>
+                <li class="d-flex align-items-end" style="font-size:8px;">{{ article.createdAt | date }}</li>
+            </ul>
+        </div>
+        <div class="ml-auto p-2 bd-highlight">
+            <app-favorite-button [favoritesCount]="article.favoritesCount" (favoriteClicked)="favoriteClicked(article)"></app-favorite-button>
+        </div>
+    </div>
+    <div class="d-flex flex-column bd-highlight global-content">
+        <div class="content-header p-2 bd-highlight">
+            {{ article.title }}
+        </div>
+        <div class="content-body p-2 bd-highlight">
+            {{ article.description }}
+        </div>
+    </div>
+    <div class="d-inline-flex bd-highlight mb-3">
+        <div class="mr-auto p-2 bd-highlight">
+            <a class="read-more-link" [routerLink]="['read-more', article.slug]">Read more...</a>
+        </div>
+        <div class="p-2 bd-highlight" *ngFor="let tag of article.tagList">
+            <button class="button-tags">{{tag}}</button>
+        </div>
+    </div>
+    <hr class="new4">
+</div>

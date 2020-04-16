@@ -1,0 +1,31 @@
+.editor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+input[type=text],[type=password] {
+    width: 660px;
+    height: 60px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.btn-lg {
+    float: right;
+    background-color: #907cff;
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 15px 32px;
+    margin: 4px 2px;
+}

@@ -20,6 +20,10 @@ export class AuthenticationService {
         return rawJson && rawJson.user;
     }
 
+    public get isLoggedIn() {
+        return this.currentUserValue != null;
+    }
+
     login(email: string, password: string) {
         return this.http.post<any>(`${environment.apiUrl}/users/login`, { user: { email, password } })
             .pipe(map(user => {

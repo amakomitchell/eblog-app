@@ -1,0 +1,30 @@
+<div class="editor-container">
+    <div class="form-content">
+        <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input formControlName="title" class="form-control" type="text" placeholder="Article Title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                    <div *ngIf="f.title.errors.required">Title is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input formControlName="description" class="form-control" type="text" placeholder="What's this article about?" [ngClass]="{ 'is-invalid': submitted && f.description.errors }">
+                <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                    <div *ngIf="f.description.errors.required">Description is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea formControlName="body" class="form-control" placeholder="Write your article (in markdown)" id="exampleFormControlTextarea1" rows="3" [ngClass]="{ 'is-invalid': submitted && f.body.errors }"></textarea>
+                <div *ngIf="submitted && f.body.errors" class="invalid-feedback">
+                    <div *ngIf="f.body.errors.required">Body is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input formControlName="tagList" class="form-control" type="text" placeholder="Enter tags">
+            </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-lg">Publish Article</button>
+            </div>
+        </form>
+    </div>
+</div>

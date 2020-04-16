@@ -16,6 +16,9 @@ import { GlobalArticleComponent } from './article/global-article/global-article.
 import { FeedArticlesComponent } from './article/feed-articles/feed-articles.component';
 import { ArticleExtensionComponent } from './article/article-extension/article-extension.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
+import { EditorComponent } from './editor/editor.component';
+import { FavoriteButtonComponent } from './shared/favorite-button/favorite-button.component';
+import { ArticleListItemComponent } from './article-list-item/article-list-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
     GlobalArticleComponent,
     FeedArticlesComponent,
     ArticleExtensionComponent,
-    PaginationComponent
+    PaginationComponent,
+    EditorComponent,
+    FavoriteButtonComponent,
+    ArticleListItemComponent
   ],
   imports: [
     BrowserModule,

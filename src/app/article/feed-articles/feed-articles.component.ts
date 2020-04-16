@@ -30,7 +30,7 @@ export class FeedArticlesComponent implements OnInit {
       const { offset, limit } = this.paging;
 
       this.articleService.getFeed(offset, limit)
-      .subscribe(response => this.articles = response.articles);
+        .subscribe(response => this.articles = response.articles);
     }
 
 }

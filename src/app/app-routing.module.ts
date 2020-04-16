@@ -8,6 +8,7 @@ import { FeedArticlesComponent } from './article/feed-articles/feed-articles.com
 import { GlobalArticleComponent } from './article/global-article/global-article.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleExtensionComponent } from './article/article-extension/article-extension.component';
+import { EditorComponent } from './editor/editor.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     },
   ]},
   { path: 'read-more/:slug', component: ArticleExtensionComponent },
+  { path: 'create-article', component: EditorComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

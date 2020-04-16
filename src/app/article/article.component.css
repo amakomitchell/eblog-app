@@ -41,3 +41,12 @@ a:hover, a:active {
     text-decoration: underline;
     color: #907cff;
 }
+
+.tab-item a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tab-item.active {
+    border-bottom: 5px solid #907cff;
+}

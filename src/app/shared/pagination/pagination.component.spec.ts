@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PaginationComponent } from './pagination.component';
 import { EventEmitter } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 fdescribe('PaginationComponent', () => {
   let component: PaginationComponent;
@@ -83,5 +84,25 @@ fdescribe('PaginationComponent', () => {
     expect(component.page).toEqual(1);
 
     component.navigate(false, component.nextPage);
+  });
+
+  it('should call #navigate with correct params when "First" button clicked', () => {
+    const navigateSpy = spyOn(component, 'navigate');
+
+    const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
+
+    anchorList[0].nativeElement.dispatchEvent(new CustomEvent('click'));
+
+    expect(navigateSpy).toHaveBeenCalledWith(true, 1);
+  });
+
+  it('should call #navigate with correct params when "Last" button clicked', () => {
+    const navigateSpy = spyOn(component, 'navigate');
+
+    const anchorList = fixture.debugElement.queryAll(By.css('.page-link'));
+
+    anchorList[anchorList.length - 1].nativeElement.dispatchEvent(new CustomEvent('click'));
+
+    expect(navigateSpy).toHaveBeenCalledWith(true, 1);
   });
 });
