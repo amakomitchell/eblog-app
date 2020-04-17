@@ -19,6 +19,7 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
 import { EditorComponent } from './editor/editor.component';
 import { FavoriteButtonComponent } from './shared/favorite-button/favorite-button.component';
 import { ArticleListItemComponent } from './article-list-item/article-list-item.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ArticleListItemComponent } from './article-list-item/article-list-item.
     PaginationComponent,
     EditorComponent,
     FavoriteButtonComponent,
-    ArticleListItemComponent
+    ArticleListItemComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 25vh;
+    width: 100vw;
+    /* padding: 15px 25px 25px 25px; */
+}
+
+.settings-header-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-size: 45px;
+    color: #000000;  
+}
+
+.sub-text {
+    font-family: Inherit;
+    font-style: normal;
+    font-size: 24px;
+    color: #907cff;
+    line-height: normal;
+    letter-spacing: 0.1em;
+}
+
+.form-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 10px 10px; */
+}
+
+input[type=text],[type=password],[type=email] {
+    width: 660px;
+    height: 60px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 13px;
+}
+
+.settings {
+    float: right;
+    background-color: #907cff;
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 15px 32px;
+    margin: 4px 2px;
+}
+
+.logout {
+    float: left;
+    background-color: white;
+    color: #b37373;
+    border: 1px solid #b37373;
+    font-size: 25px;
+    padding: 15px 32px;
+    margin: 4px 2px;
+}

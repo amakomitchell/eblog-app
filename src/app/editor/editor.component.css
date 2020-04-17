@@ -5,14 +5,12 @@
     width: 100vw;
     height: 100vh;
     margin-top: 0;
-    background-color: lightcoral;
 }
 
 .form-content {
     display: flex;
     flex-direction: column;
     margin-top: 0px;
-    background-color: lightseagreen;
 }
 
 input[type=text] {

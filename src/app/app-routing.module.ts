@@ -9,6 +9,7 @@ import { GlobalArticleComponent } from './article/global-article/global-article.
 import { ArticleComponent } from './article/article.component';
 import { ArticleExtensionComponent } from './article/article-extension/article-extension.component';
 import { EditorComponent } from './editor/editor.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   ]},
   { path: 'read-more/:slug', component: ArticleExtensionComponent },
   { path: 'create-article', component: EditorComponent },
+  { path: 'settings', component: SettingsComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

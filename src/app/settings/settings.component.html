@@ -1,0 +1,47 @@
+<div class="settings-container 100-vw">
+    <div class="header">
+        <div class="settings-header-text">Your Settings</div>
+    </div>
+    <div class="form-content">
+        <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input formControlName="image" class="form-control" type="text" placeholder="URL of profile picture" [ngClass]="{ 'is-invalid': submitted && f.image.errors }">
+                <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
+                    <div *ngIf="f.image.errors.required">User Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input formControlName="username" class="form-control" type="text" placeholder="Admin" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Email is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input formControlName="bio" class="form-control" type="text" placeholder="Short bio about you" [ngClass]="{ 'is-invalid': submitted && f.bio.errors }">
+                <div *ngIf="submitted && f.bio.errors" class="invalid-feedback">
+                    <div *ngIf="f.bio.errors.required">Email is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input formControlName="email" class="form-control" type="email" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input formControlName="password" class="form-control" type="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="settings btn btn-lg">Update Settings</button>
+            </div>
+        </form>
+        <hr>
+        <div class="form-group">
+            <button (click)="logout()" class="logout btn btn-lg">Or click here to logout</button>
+        </div>
+    </div>
+</div>
