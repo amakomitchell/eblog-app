@@ -21,6 +21,8 @@ export class GlobalArticleComponent implements OnChanges {
   };
   tagList: String[];
 
+  loading = false;
+
   constructor(
     private articleService: ArticleService,
     private route: ActivatedRoute,
@@ -37,6 +39,8 @@ export class GlobalArticleComponent implements OnChanges {
   }
 
   private loadArticles() {
+    this.loading = true;
+    
     if (this.activeTab) {
       const { offset, limit } = this.paging;
       const { slug: tabSlug } = this.activeTab;

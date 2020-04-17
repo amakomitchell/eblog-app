@@ -1,7 +1,9 @@
 <div class="global-article-container">
-    <app-article-list-item *ngFor="let article of articles" [article]="article"></app-article-list-item>
+    <app-article-list-item *ngFor="let article of articles" [article]="article">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+    </app-article-list-item>
     <app-pagination [page]="1"
                     [itemsPerPage]="paging.limit" 
                     [totalItems]="articles?.length"
-                    (pageChanged)="loadNewPage($event)"></app-pagination>*/
+                    (pageChanged)="loadNewPage($event)"></app-pagination>
 </div>

@@ -33,4 +33,8 @@ export class FeedArticlesComponent implements OnInit {
         .subscribe(response => this.articles = response.articles);
     }
 
+    loadNewPage(page: number) {
+      console.log(`Page: ${page}`);
+    }
+
 }
