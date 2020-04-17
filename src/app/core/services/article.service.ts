@@ -37,4 +37,8 @@ export class ArticleService {
             return this.http.post(url, {});
         }
     }
+
+    createArticle(article: Article) {
+        return this.http.post<any>(`${environment.apiUrl}/articles`, { article });
+    }
 }

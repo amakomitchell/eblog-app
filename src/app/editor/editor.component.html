@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <textarea formControlName="body" class="form-control" placeholder="Write your article (in markdown)" id="exampleFormControlTextarea1" rows="3" [ngClass]="{ 'is-invalid': submitted && f.body.errors }"></textarea>
+                <textarea formControlName="body" class="form-control" placeholder="Write your article (in markdown)" id="exampleFormControlTextarea1" rows="5" [ngClass]="{ 'is-invalid': submitted && f.body.errors }"></textarea>
                 <div *ngIf="submitted && f.body.errors" class="invalid-feedback">
                     <div *ngIf="f.body.errors.required">Body is required</div>
                 </div>

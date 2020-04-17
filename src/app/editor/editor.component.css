@@ -4,20 +4,28 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    margin-top: 0;
+    background-color: lightcoral;
 }
 
 .form-content {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
+    margin-top: 0px;
+    background-color: lightseagreen;
 }
 
-input[type=text],[type=password] {
-    width: 660px;
-    height: 60px;
-    padding: 12px 20px;
-    margin: 8px 0;
+input[type=text] {
+    width: 900px;
+    height: 85px;
+    padding: 16px 24px;
+    margin: 12px 0;
     box-sizing: border-box;
+    border-radius: 15px;
+}
+
+textarea {
+    border-radius: 15px;
 }
 
 .btn-lg {
