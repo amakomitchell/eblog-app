@@ -1,0 +1,8 @@
+.button-count {
+    background-color: white;
+    color: black;
+    border: 1px solid #907cff;
+    border-radius: 7px;
+    color: #907cff;
+    font-size: 16px; /* Set a font size */
+}
